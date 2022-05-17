@@ -131,15 +131,21 @@ for (let i = 0; i < icons.length; i++) {
 	// - richiamo dal template nell'HTML (iconBox) tutti gli elementi a cui dovrò assegnare delle proprietà:
 	// - nell'elemento .label inserisco (.innerHTML) il valore della chiave 'name' di tutti gli oggetti dell'array icons;
 	iconBox.querySelector(".label").innerHTML = name;
-	// - all'elemento .single-icon aggiungo le classi necessarie per visualizzarla (.innerHTML) composte dai valori delle chiavi 'family', 'prefix' e 'name' di tutti gli oggetti dell'array icons;
+	// - all'elemento .single-icon aggiungo le classi necessarie per visualizzarla (.classList.add) composte dai valori delle chiavi 'family', 'prefix' e 'name' di tutti gli oggetti dell'array icons;
 	iconBox.querySelector(".single-icon").classList.add(family, prefix + name);
+
+	// Milestone 2
+	// Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente:
+	//  all'elemento .single-icon aggiungo lo stile in-line affinchè il colore corrisponda al valore della chiave 'color' di tutti gli oggetti dell'array icons.
+	iconBox.querySelector(".single-icon").style.color = color;
+
 	// - appendo ogni iconBox al container.
     container.append(iconBox);
 }
 
 
-// Milestone 2
-// Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
+
+
 // Milestone 3
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 
