@@ -132,11 +132,9 @@ for (let i = 0; i < icons.length; i++) {
 	// - nell'elemento .label inserisco (.innerHTML) il valore della chiave 'name' di tutti gli oggetti dell'array icons;
 	iconBox.querySelector(".label").innerHTML = name;
 	// - all'elemento .single-icon aggiungo le classi necessarie per visualizzarla (.innerHTML) composte dai valori delle chiavi 'family', 'prefix' e 'name' di tutti gli oggetti dell'array icons;
-	iconBox.querySelector(".single-icon").classList.add(`"${family}", "${prefix}${name}"`);
-
+	iconBox.querySelector(".single-icon").classList.add(family, prefix + name);
 	// - appendo ogni iconBox al container.
     container.append(iconBox);
-
 }
 
 

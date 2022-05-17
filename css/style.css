@@ -58,7 +58,7 @@ main {
     width: calc(100% / 5 - 80px);
     height: 100px;
     background-color: white;
-    margin: 10px 40px;
+    margin: 15px 40px;
     border-radius: 10px;
     position: relative;
 }
@@ -73,7 +73,7 @@ main {
 }
 
 .small.icon.box i {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .small.icon.box .label {
