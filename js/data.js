@@ -1,4 +1,4 @@
-[
+const icons = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -114,7 +114,32 @@
 ];
 
 // Milestone 1
-// Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa.
+// Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa:
+// - richiamo il container HTML e lo salvo nella const container;
+const container = document.querySelector(".icon.container");
+
+// - richiamo il CONTENUTO (.content) del template HTML dove risiede il mio elemento da clonare e lo salvo nella const templateContent;
+const templateContent = document.querySelector("#template-icon-box").content;
+console.log("templateContent = ", templateContent);
+
+// - scorrendo PER tutta la lunghezza dell'array icons:
+for (let i = 0; i < icons.length; i++) {
+	// - salvo nella costante iconBox il template CLONATO;
+	const iconBox = templateContent.cloneNode(true);
+	// - ?????
+	const {name, prefix, type, family, color} = icons[i];
+	// - richiamo dal template nell'HTML (iconBox) tutti gli elementi a cui dovrò assegnare delle proprietà:
+	// - nell'elemento .label inserisco (.innerHTML) il valore della chiave 'name' di tutti gli oggetti dell'array icons;
+	iconBox.querySelector(".label").innerHTML = name;
+	// - all'elemento .single-icon aggiungo le classi necessarie per visualizzarla (.innerHTML) composte dai valori delle chiavi 'family', 'prefix' e 'name' di tutti gli oggetti dell'array icons;
+	iconBox.querySelector(".single-icon").classList.add(`"${family}", "${prefix}${name}"`);
+
+	// - appendo ogni iconBox al container.
+    container.append(iconBox);
+
+}
+
+
 // Milestone 2
 // Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 // Milestone 3

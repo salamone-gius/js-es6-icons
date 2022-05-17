@@ -26,24 +26,23 @@
                 </select>
             </div>
         </header>
+
         <main>
-            <div class="flex icon container">
-                <div class="big icon box">
-                    <div class="flex small icon box">
-                        <i class="fa-regular fa-face-grin-stars"></i>
-                        <div class="label">label</div>
-                    </div>
-                </div>
-                <div class="big icon box">
-                    <div class="flex small icon box">
-                        <i class="fa-regular fa-face-grin-stars"></i>
-                        <div class="label">label</div>
-                    </div>
+            <div class="flex icon container"></div>
+        </main>
+
+        <!-- con il tag <template> rendo invisibile e clonabile il box che visualizzerò attraverso lo script js -->
+        <template id="template-icon-box">
+            <div class="big icon box">
+                <div class="flex small icon box">
+                    <i class="single-icon"></i>
+                    <div class="label"></div>
                 </div>
             </div>
+        </template>
+        <!-- /con il tag <template> rendo invisibile e clonabile il box che visualizzerò attraverso lo script js -->
 
-        </main>
-        
+
         <script src="js/data.js"></script>
     </body>
 </html>
